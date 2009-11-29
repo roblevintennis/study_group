@@ -18,5 +18,3 @@ Meetup 2: class inheritance, module included, module not included.
      in its own separate file; this is done using 'require'.         
 
        
-
-  
