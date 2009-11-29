@@ -1,23 +1,6 @@
-#!/usr/bin/ruby -w
+#!/usr/bin/env ruby -w
 
-module Greeting
-  def say_hi
-    "hi to you from #{@name}"
-  end
-end
-
-
-class Person
-  include Greeting
-  
-  attr_accessor :name, :age
- 
-  def initialize(name, age=27)
-    @name = name
-    @age  = age
-  end
-end
-
+require 'person.rb'
 
 # Let's enquire about Person's family
 puts "Person.superclass=#{Person.superclass}"
@@ -29,8 +12,11 @@ she = Person.new('Michelle', 37)
 
 puts  "he=#{he}, she=#{she}, he.class=#{he.class}"
 puts  "she.name=#{she.name}, he.name=#{he.name}"
+puts
 
 he.age = 39
 puts "he.age=#{he.age}"
 
 puts "he.say_hi=#{he.say_hi}"
+
+p "GreetingNotIncluded.say_hi=#{GreetingNotIncluded.say_hi}"

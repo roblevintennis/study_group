@@ -1,2 +1,22 @@
 
-This file sucks!
+Objectives:
+-----------
+
+Meetup 1: class, module, instance variables, attribute accessors
+          
+  notes: class includes module; the instance variables of the class
+         are visible by the module methods.
+
+Meetup 2: class inheritance, module included, module not included.
+          
+  notes: 
+  a) we show 2 different ways to initialize instance variables, with "@name"  
+     (see file person1.rb) and with "self.name" using the accessor methods 
+     (see file person2.rb)
+ 
+  b) we have logic, in file user_of_person2.rb, of the class Person2 defined
+     in its own separate file; this is done using 'require'.         
+
+       
+
+  

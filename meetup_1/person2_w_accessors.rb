@@ -1,6 +1,14 @@
-#!/usr/bin/ruby -w
+#!/usr/bin/env ruby -w
 
 module Greeting
+  
+  # When a module is included by a class, the methods of the module have
+  # visibility over the instance variables of the class; we show here this,
+  # cautioning that it may not always be wise (because "binds" the module to
+  # the class); but sometimes it may be very useful. 
+  #
+  # Thus, take the following only as an example:
+  #
   def say_hi
     "hi to you from #{@name}"
   end
@@ -10,18 +18,8 @@ end
 class Person
   include Greeting
   
-  def name
-    @name
-  end
-
-  def age
-    @age
-  end
-  
-  def age=(new_age)
-    @age = new_age
-  end
-  
+  attr_accessor :name, :age
+ 
   def initialize(name, age=27)
     @name = name
     @age  = age
